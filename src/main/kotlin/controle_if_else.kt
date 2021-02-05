@@ -45,17 +45,14 @@ fun calculaBonus(cargo: String, salario: Double): Double {
 fun calculaBonus2(cargo: String, salario: Double): Double {
     // Gerente Junior, Gerente Senior, Coordenador
 
-    val bonus: Double
-
-    if (cargo == "Coordenador") {
-        bonus = salario * 0.2
+    // retornando o if
+    return if (cargo == "Coordenador") {
+        salario * 0.2
     } else if (cargo == "Gerente Junior") {
-        bonus = salario * 0.5
+        salario * 0.5
     } else {
-        bonus = salario * 2
+        salario * 2
     }
-
-    return bonus
 }
 
 fun main() {
