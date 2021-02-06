@@ -1,5 +1,5 @@
 fun main() {
-    var index: Int = 0
+    var index = 0
     do {
         // executa pelo menos uma vez
         print("$index ")
