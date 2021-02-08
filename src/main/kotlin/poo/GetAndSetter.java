@@ -13,7 +13,7 @@ public class GetAndSetter {
     }
 
     public static void main(String[] args) {
-        Maquina m = new Maquina("xpto");
+        Maquina3 m = new Maquina3("xpto");
         m.getMarca(); // definida implicitamente pelo kt
         m.setMarca("teste");
     }

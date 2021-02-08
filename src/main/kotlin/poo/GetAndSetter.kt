@@ -1,6 +1,6 @@
 package poo
 
-class Maquina(var marca: String)
+class Maquina3(var marca: String)
 
 fun main() {
 
