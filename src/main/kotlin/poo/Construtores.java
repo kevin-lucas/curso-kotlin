@@ -1,18 +1,18 @@
-package poo.construtores;
+package poo;
 
-public class Pessoa {
+public class Construtores {
 
     private String nome;
     private int anoNascimento;
 
     // constructor
-    public Pessoa(String nome, int anoNascimento){
+    public Construtores(String nome, int anoNascimento) {
         this.nome = nome;
         this.anoNascimento = anoNascimento;
     }
 
     public static void main(String[] args) {
-        poo.construtores.Pessoa p = new poo.construtores.Pessoa("Jose", 1999);
+        Construtores p = new Construtores("Jose", 1999);
         System.out.println(p.nome);
     }
 

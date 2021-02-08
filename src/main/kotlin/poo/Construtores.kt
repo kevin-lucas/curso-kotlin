@@ -1,6 +1,6 @@
-package poo.construtores
+package poo
 
-class Pessoa2(var nome: String){
+class Pessoa4(var nome: String) {
 
     // liberando acesso ao attr ano
     var ano: Int? = null
@@ -9,11 +9,11 @@ class Pessoa2(var nome: String){
     // obrigatório a chamada do construtor primário
     // acresentar mais atributos para diferenciar do primário
     // os atributos do contruturo são acessiveis em outro local
-    constructor(nome: String, ano: Int) : this(nome){
+    constructor(nome: String, ano: Int) : this(nome) {
         this.ano = ano // acessando o attr do construtor
     }
 
-    fun saudacao(){
+    fun saudacao() {
         println("Olá, meu nome é $nome e nasci no ano $ano")
     }
 
@@ -21,8 +21,8 @@ class Pessoa2(var nome: String){
 
 fun main() {
 
-    val p1: Pessoa2 = Pessoa2("Fulano")
-    val p2: Pessoa2 = Pessoa2("Silva", 1990)
+    val p1: Pessoa4 = Pessoa4("Fulano")
+    val p2: Pessoa4 = Pessoa4("Silva", 1990)
     p2.saudacao()
     p1.saudacao()
 
