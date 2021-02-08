@@ -1,0 +1,26 @@
+package exercises
+
+import org.junit.Assert
+import org.junit.Test
+
+class VowelConsonantTest {
+
+    @Test
+    fun countVowerls() {
+        Assert.assertEquals(11, countVowerls("Quantas vogais tem essa frase?"))
+    }
+
+    @Test
+    fun countConsoanants() {
+        Assert.assertEquals(21, countConsonants("Geralmente uma frase possui mais consoantes"))
+    }
+
+    @Test
+    fun countVowelsAndConsonants() {
+        var phrase = "Estou gostando muito de aprender Kotlin"
+
+        Assert.assertEquals(15, countVowerls(phrase))
+        Assert.assertEquals(19, countConsonants(phrase))
+    }
+
+}
