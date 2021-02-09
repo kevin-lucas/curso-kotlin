@@ -4,6 +4,10 @@ data class Food(val name: String, val calories: Double, val ingredients: List<In
 
 data class Ingredients(val name: String, val quantity: Int)
 
+fun hasIngredient(list: List<Ingredients>, name: String): Boolean {
+    return list.filter { it.name == name }.any()
+}
+
 fun main(args: Array<String>) {
 
     val data = listOf(
@@ -58,4 +62,22 @@ fun main(args: Array<String>) {
         println("${x.index + 1} = ${x.value.name}")
     }
 
+    // Sei como fazer panqueca? e sushi?
+    val knowPancake = data.filter { it.name == "Panqueca" }.any()
+    val knowShusi = data.filter { it.name == "Sushi" }.any()
+    println(knowPancake)
+    println(knowShusi)
+
+    // Quais são as comidas com mais de 500 calorias?
+    val more500 = data.filter { it.calories > 500 }.forEach { println(it.name) }
+
+    // Par (chave, valor) de comidas com mais de 500 calorias (name, calories)
+    data.filter { it.calories > 500 }.map { Pair(it.name, it.calories) }
+        .forEach { println("${it.first} - ${it.second} ") }
+
+    // Quais das receitas possuir farinha como ingredientes?
+    // data.filter { it.ingredients.filter { it.name == "Farinha" } }
+
+    // Defafio
+    val result = data.filter { hasIngredient(it.ingredients, "Farinha") }.forEach{ println(it.name)}
 }
